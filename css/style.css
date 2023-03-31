@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #112031;
+  --card-bg: #395b64;
+  --text-color: #e7f6f2;
+  --imc-color: #a5c9ca;
+}
+
+body {
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.wrapper {
+  background: var(--card-bg);
+  box-shadow: 26px 26px 96px #0b141e, -26px -26px 96px #172c44;
+  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container {
+  width: 100%;
+}
+
+.container h1 {
+  color: var(--text-color);
+  font-size: 40px;
+}
+
+.container .valuesArea * {
+  display: block;
+}
+
+.container .valuesArea label {
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.container .valuesArea input {
+  background: var(--text-color);
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.actionsArea {
+  margin: 20px 0;
+}
+
+.container .actionsArea * {
+  display: inline-block;
+}
+
+.container .actionsArea p {
+  width: 50%;
+  background: var(--imc-color);
+  color: var(--bg-color);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.container .actionsArea button.actionBtn {
+  text-align: center;
+  width: 23.9%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.container .actionsArea button.actionBtn:hover,
+.container .actionsArea button.actionBtn:focus {
+  background: var(--imc-color);
+  color: var(--bg-color);
+}
+
+@media (max-width: 600px) {
+  body {
+    background: var(--card-bg);
+  }
+
+  .wrapper {
+    box-shadow: none;
+  }
+
+  .container .actionsArea p {
+    display: block;
+    width: 100%;
+  }
+
+  .container .actionsArea button.actionBtn {
+    margin-top: 20px;
+    width: 49.4%;
+  }
+}
+
+@media (max-width: 435px) {
+  .container .actionsArea button.actionBtn {
+    width: 100%;
+  }
+}
