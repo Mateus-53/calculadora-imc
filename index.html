@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
+    <script src="js/script.js" defer></script>
     <title>Calculadora de IMC</title>
   </head>
   <body>
@@ -49,6 +49,44 @@
         </div>
       </div>
     </div>
-    <script src="js/script.js"></script>
+    <div class="wrapper">
+      <div class="container">
+        <table class="classification">
+          <thead>
+            <tr>
+              <th>IMC</th>
+              <th>Classificação</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="trClass">
+              <td>Abaixo de 18,5</td>
+              <td>Baixo Peso</td>
+            </tr>
+            <tr class="trClass">
+              <td>Entre 18,6 e 24,9</td>
+              <td>Peso Normal</td>
+            </tr>
+            <tr class="trClass">
+              <td>Entre 25 e 29,9</td>
+              <td>Sobrepeso</td>
+            </tr>
+            <tr class="trClass">
+              <td>Entre 30 e 34,9</td>
+              <td>Obesidade Grau I</td>
+            </tr>
+            <tr class="trClass">
+              <td>Entre 35 e 39,9</td>
+              <td>Obesidade Grau II</td>
+            </tr>
+            <tr class="trClass">
+              <td>Acima de 40</td>
+              <td>Obesidade Grau III</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
