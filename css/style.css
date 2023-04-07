@@ -15,14 +15,28 @@
 body {
   background: var(--bg-color);
   display: flex;
+  flex-direction: row;
+  width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--card-bg);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--imc-color);
 }
 
 .wrapper {
   background: var(--card-bg);
-  box-shadow: 26px 26px 96px #0b141e, -26px -26px 96px #172c44;
   border-radius: 10px;
   height: 500px;
   width: 500px;
@@ -56,10 +70,18 @@ body {
   background: var(--text-color);
   width: 100%;
   padding: 10px;
+  font-size: 18px;
   border: none;
   outline: none;
-  font-size: 18px;
   border-radius: 5px;
+}
+
+.container table.classification {
+  width: 100%;
+  text-align: center;
+  color: var(--text-color);
+  border-collapse: collapse;
+  overflow: hidden;
 }
 
 .actionsArea {
@@ -74,7 +96,6 @@ body {
   width: 50%;
   background: var(--imc-color);
   color: var(--bg-color);
-  font-size: 18px;
   font-weight: bold;
   padding: 10px 15px;
   border-radius: 5px;
@@ -82,7 +103,7 @@ body {
 
 .container .actionsArea button.actionBtn {
   text-align: center;
-  width: 23.9%;
+  width: 23.8%;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 10px;
@@ -100,12 +121,34 @@ body {
   color: var(--bg-color);
 }
 
+.container table.classification tr :where(th, td) {
+  padding: 15px 5px;
+  border-bottom: 3px solid var(--imc-color);
+}
+
+.container table.classification thead {
+  background: var(--bg-color);
+}
+
+.container table.classification .trClass {
+  background: var(--card-bg);
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  body {
+    justify-content: normal;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     background: var(--card-bg);
   }
 
   .wrapper {
+    width: 100%;
     box-shadow: none;
   }
 
@@ -116,12 +159,39 @@ body {
 
   .container .actionsArea button.actionBtn {
     margin-top: 20px;
-    width: 49.4%;
+    width: 49.3%;
   }
 }
 
 @media (max-width: 435px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container h1 {
+    font-size: 35px;
+  }
+
+  .container .valuesArea label {
+    font-size: 18px;
+  }
+
+  .container .valuesArea input {
+    font-size: 16px;
+  }
+
   .container .actionsArea button.actionBtn {
     width: 100%;
+    font-size: 16px;
+  }
+
+  .container table.classification {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 295px) {
+  .wrapper {
+    margin: 20px 0;
   }
 }
