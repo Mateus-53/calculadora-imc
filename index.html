@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="js/script.js" defer></script>
-    <title>Calculadora de IMC</title>
-  </head>
-  <body>
-    <div class="wrapper">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="js/script.js" defer></script>
+  <title>Calculadora de IMC</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="card">
       <div class="container">
         <h1>Calcule seu IMC</h1>
         <div class="valuesArea">
           <label for="peso">Peso:</label>
-          <input
-            type="number"
-            class="inputValues"
-            id="peso"
-            placeholder="Quilogramas"
-            autocomplete="off"
-            maxlength="3"
-            required
-          />
+          <input type="number" class="inputValues" id="peso" placeholder="Quilogramas" autocomplete="off" maxlength="3"
+            required />
         </div>
         <div class="valuesArea">
           <label for="altura">Altura:</label>
-          <input
-            type="number"
-            class="inputValues"
-            id="altura"
-            placeholder="Metros"
-            step="0.01"
-            autocomplete="off"
-            required
-          />
+          <input type="number" class="inputValues" id="altura" placeholder="Metros" step="0.01" autocomplete="off"
+            required />
         </div>
         <div class="actionsArea">
           <p>IMC: <span class="imcValue"></span></p>
@@ -49,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="wrapper">
+    <div class="card">
       <div class="container">
         <table class="classification">
           <thead>
@@ -58,7 +44,6 @@
               <th>Classificação</th>
             </tr>
           </thead>
-
           <tbody>
             <tr class="trClass">
               <td>Abaixo de 18,5</td>
@@ -88,5 +73,7 @@
         </table>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

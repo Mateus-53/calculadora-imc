@@ -1,197 +1,200 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 
 :root {
-  --bg-color: #112031;
-  --card-bg: #395b64;
-  --text-color: #e7f6f2;
-  --imc-color: #a5c9ca;
+	--bg-color: #112031;
+	--card-bg: #395b64;
+	--text-color: #e7f6f2;
+	--imc-color: #a5c9ca;
 }
 
 body {
-  background: var(--bg-color);
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 18px;
+	background: var(--bg-color);
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--card-bg);
+	background: var(--card-bg);
 }
 body::-webkit-scrollbar-thumb {
   background: var(--imc-color);
 }
 
 .wrapper {
-  background: var(--card-bg);
-  border-radius: 10px;
-  height: 500px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.card {
+	background: var(--card-bg);
+	border-radius: 10px;
+	height: 500px;
+	width: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 25px;
 }
 
 .container {
-  width: 100%;
+	width: 100%;
 }
 
 .container h1 {
-  color: var(--text-color);
-  font-size: 40px;
+	color: var(--text-color);
+	font-size: 2.5rem;
 }
 
 .container .valuesArea * {
-  display: block;
+	display: block;
 }
 
 .container .valuesArea label {
-  color: var(--text-color);
-  font-size: 20px;
-  margin: 5px 0;
+	color: var(--text-color);
+	font-size: 1.25rem;
+	margin: 5px 0;
 }
 
 .container .valuesArea input {
-  background: var(--text-color);
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
+	background: var(--text-color);
+	width: 100%;
+	padding: 10px;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	border-radius: 5px;
 }
 
 .container table.classification {
-  width: 100%;
-  text-align: center;
-  color: var(--text-color);
-  border-collapse: collapse;
-  overflow: hidden;
+	width: 100%;
+	text-align: center;
+	color: var(--text-color);
+	border-collapse: collapse;
+	overflow: hidden;
 }
 
 .actionsArea {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
-.container .actionsArea * {
-  display: inline-block;
+.container .actionsArea {
+	display: flex;
+	gap: 5px;
 }
 
 .container .actionsArea p {
-  width: 50%;
-  background: var(--imc-color);
-  color: var(--bg-color);
-  font-weight: bold;
-  padding: 10px 15px;
-  border-radius: 5px;
+	width: 100%;
+	background: var(--imc-color);
+	color: var(--bg-color);
+	font-weight: bold;
+	padding: 10px 15px;
+	border-radius: 5px;
 }
 
 .container .actionsArea button.actionBtn {
-  text-align: center;
-  width: 23.8%;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 10px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s;
+	text-align: center;
+	width: 150px;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	padding: 10px;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
 }
 
-.container .actionsArea button.actionBtn:hover,
-.container .actionsArea button.actionBtn:focus {
-  background: var(--imc-color);
-  color: var(--bg-color);
+.container .actionsArea button.actionBtn:is(:hover, :focus) {
+	background: var(--imc-color);
+	color: var(--bg-color);
 }
 
-.container table.classification tr :where(th, td) {
-  padding: 15px 5px;
-  border-bottom: 3px solid var(--imc-color);
+.container table.classification tr :is(th, td) {
+	padding: 15px 5px;
+	border-bottom: 3px solid var(--imc-color);
 }
 
 .container table.classification thead {
-  background: var(--bg-color);
+	background: var(--bg-color);
 }
 
 .container table.classification .trClass {
-  background: var(--card-bg);
-  transition: all 0.3s ease-in-out;
+	background: var(--card-bg);
+	transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 1000px) {
-  body {
-    justify-content: normal;
-    flex-direction: column;
-  }
+@media (max-width: 1050px) {
+	body {
+		height: 100%;
+	}
+
+	.wrapper {
+		margin: 15px 0;
+		flex-direction: column;
+	}
 }
 
-@media (max-width: 600px) {
-  body {
-    background: var(--card-bg);
-  }
+@media (max-width: 500px) {
+	body {
+		background: var(--card-bg);
+	}
 
-  .wrapper {
-    width: 100%;
-    box-shadow: none;
-  }
+	.wrapper,
+	.card {
+		width: 100%;
+		height: 100%;
+	}
 
-  .container .actionsArea p {
-    display: block;
-    width: 100%;
-  }
+	.container h1 {
+		font-size: 2.25rem;
+		line-height: 2.5rem;
+	}
 
-  .container .actionsArea button.actionBtn {
-    margin-top: 20px;
-    width: 49.3%;
-  }
+	.container .valuesArea label {
+		font-size: 1rem;
+	}
+
+	.container .valuesArea input {
+		font-size: 0.8rem;
+	}
+
+	.container .actionsArea {
+		display: block;
+	}
+
+	.container .actionsArea *:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	.container .actionsArea button.actionBtn {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.container table.classification {
+		font-size: 1rem;
+	}
 }
 
-@media (max-width: 435px) {
-  body {
-    font-size: 16px;
-  }
-
-  .container h1 {
-    font-size: 35px;
-  }
-
-  .container .valuesArea label {
-    font-size: 18px;
-  }
-
-  .container .valuesArea input {
-    font-size: 16px;
-  }
-
-  .container .actionsArea button.actionBtn {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .container table.classification {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 295px) {
-  .wrapper {
-    margin: 20px 0;
-  }
+@media (max-width: 500px) {
+	.card {
+		padding: 40px 15px;
+	}
 }
